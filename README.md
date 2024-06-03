@@ -3,7 +3,9 @@ to flatten the brain structure
 get FreeSurfer license from https://surfer.nmr.mgh.harvard.edu/fswiki/License
 
 # Using docker images
+
 `docker pull bids/freesurfer`
+
 `docker pull tigrlab/fmriprep_ciftify`
 
 then create a folder with BIDS structure
@@ -15,6 +17,7 @@ BIDS_project
 ```
 
 create a description files under BIDS_project folder for freesurfer to run
+
 `dataset_description.json`:
 ```
 {
@@ -113,6 +116,7 @@ ciftify_subject_fmri --already-in-MNI --ciftify-work-dir /out /funcnii/S01_DMT_p
 `S01_DMT_post1_clean.nii.gz` is the functional data in MNI space. The last argument `DMT` is the task name.
 
 Then the results will be saved in `ciftify_out` folder.
+```
 ciftify_out
     - sub-01
         - MNINonLinear
